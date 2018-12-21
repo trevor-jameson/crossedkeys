@@ -1,6 +1,6 @@
 import Typography from "typography"
-import doelgerTheme from "typography-theme-doelger"
+import sternGroveTheme from "typography-theme-stern-grove"
 
-const typography = new Typography(doelgerTheme)
+const typography = new Typography(sternGroveTheme)
 
 export default typography

@@ -8,16 +8,28 @@ import keys from '../images/crossedkeys.png'
 
 const NavWrapper = styled.div`
 
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  background-color: #06081E;
+  width: 100vw;
+
+
+
   li a {
     color: black;
     text-decoration: none;
     display: block;
     text-align: center;
     width: 75px;
+    color: white;
+    font-size: 1.5em;
   }
 
   li {
     float: left;
+    margin-left: 7vw;
   }
 
   ul {
@@ -28,12 +40,9 @@ const NavWrapper = styled.div`
   }
 
   #crossedkeysLogo {
+    margin-top: 2vw;
+    margin-left: 2.5vw;
     width: 10vw
-  }
-
-  .navbar {
-    background: '#70c1b3';
-    margin-bottom: '1.45rem';
   }
 `
 
