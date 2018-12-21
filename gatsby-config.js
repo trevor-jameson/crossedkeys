@@ -10,6 +10,7 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-transformer-remark',
     'gatsby-plugin-offline',
+    `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -34,6 +35,12 @@ module.exports = {
         theme_color: '#7031b3',
         display: 'minimal-ui',
         icon: 'src/images/crossedkeys-icon.png', // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/utils/typography`,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
