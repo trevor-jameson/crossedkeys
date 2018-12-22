@@ -22,7 +22,7 @@ const NavWrapper = styled.div`
     text-decoration: none;
     display: block;
     text-align: center;
-    width: 75px;
+    width: 10vw;
     color: white;
     font-size: 1.5em;
   }
@@ -40,9 +40,8 @@ const NavWrapper = styled.div`
   }
 
   #crossedkeysLogo {
-    margin-top: 2vw;
-    margin-left: 2.5vw;
-    width: 10vw
+    margin-top: 1.5vw;
+    width: 12vw
   }
 `
 
@@ -53,40 +52,40 @@ const Navbar = ({ siteTitle }) => (
         <img src={keys} id='crossedkeysLogo'/>
       </li>
       <li>
-        <h4>
+        <p>
           <Link
             to="/about"
           >
             About
           </Link>
-        </h4>
+        </p>
       </li>
       <li>
-        <h4>
+        <p>
           <Link
             to="/blog"
           >
             Blog
           </Link>
-        </h4>
+        </p>
       </li>
       <li>
-        <h4>
+        <p>
           <Link
             to="/projects"
           >
             Projects
           </Link>
-        </h4>
+        </p>
       </li>
       <li>
-        <h4>
+        <p>
           <Link
             to="/contact"
           >
             Contact
           </Link>
-        </h4>
+        </p>
       </li>
     </ul>
   </NavWrapper>

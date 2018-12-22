@@ -1,10 +1,11 @@
 import React, { Fragment } from 'react'
-import SEO from '../components/seo'
+import SEO from '../Components/SEO'
 import { Link } from 'gatsby'
 
 // Sub-components
-import Navbar from '../components/navbar'
+import Navbar from '../Components/Navbar'
 import styled from 'styled-components'
+import RecentArticlesList from '../Components/RecentArticlesList'
 
 // Images and styling
 import splashBackgroundImg from '../images/billy-huynh-278252-unsplash.jpg'
@@ -20,7 +21,7 @@ const SplashHeader = styled.div`
     margin-top: 15vw;
 
     h1 {
-        font-size: 5vw;
+        font-size: 3vw;
         font-family: arial;
         color: white;
     }
@@ -45,12 +46,13 @@ const AboutMe = styled.div`
         border-style: solid;
         border-width: 3px;
         position: absolute;
-        margin-left: 5%
+        left: 35%;
+        top: 52vw;
     }
+`
 
-    .hoverHide:hover {
-        display: none;
-    }
+const RecentArticles = styled.div`
+
 `
 
 const IndexPage = () => (
@@ -65,9 +67,14 @@ const IndexPage = () => (
             <img src={splashBackgroundImg} alt='A shimmering cloud of red and blue glitter'/>
         </SplashBackground>
         <AboutMe>
-            <img className='hoverHide' src={aboutMeFront} alt='Some dizzy dolt (the author) with eyes whipped sideways' />
-            <img  src={aboutMeBack} alt='Ah! Who said you could hover on me'/>
+            <img className='aboutMeFront'src={aboutMeFront} alt='Some dizzy dolt (the author) with eyes whipped sideways' />
+            <img  className='aboutMeBack' src={aboutMeBack} alt='Ah! Who said you could hover on me'/>
+            <Link to='/about'>About</Link>
         </AboutMe>
+        <RecentArticles>
+            {/* Two recent Articles components go here, side by side,
+            one for technical Articles and one for creative Articles */}
+        </RecentArticles>
     </>
 )
 

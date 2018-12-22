@@ -1,8 +1,11 @@
+const config = require("./siteConfig");
+
 module.exports = {
   siteMetadata: {
     title: 'CrossedKeys',
     description: 'A personal blog exploring and explaining software development through storytelling',
     author: 'Trevor Jameson',
+    ...config,
   },
   plugins: [
     'gatsby-plugin-react-helmet',
