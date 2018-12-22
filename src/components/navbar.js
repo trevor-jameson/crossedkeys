@@ -3,6 +3,9 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import styled from 'styled-components'
 
+// Sub-components
+import ListLink from './ListLink'
+
 
 import keys from '../images/crossedkeys.png'
 
@@ -25,11 +28,12 @@ const NavWrapper = styled.div`
     width: 10vw;
     color: white;
     font-size: 1.5em;
+    margin-top: 2.5vw;
   }
 
   li {
     float: left;
-    margin-left: 5vw;
+    margin-right: 4vw;
   }
 
   ul {
@@ -41,52 +45,23 @@ const NavWrapper = styled.div`
 
   #crossedkeysLogo {
     margin-top: 1.5vw;
-    width: 12vw
+    margin-left: 2vw;
+    width: 10vw
   }
 `
 
-const Navbar = ({ siteTitle }) => (
+const Navbar = () => (
   <NavWrapper>
     <ul>
       <li>
-        <img src={keys} id='crossedkeysLogo'/>
+        <img src={keys} 
+        id='crossedkeysLogo'
+        />
       </li>
-      <li>
-        <p>
-          <Link
-            to="/about"
-          >
-            About
-          </Link>
-        </p>
-      </li>
-      <li>
-        <p>
-          <Link
-            to="/blog"
-          >
-            Blog
-          </Link>
-        </p>
-      </li>
-      <li>
-        <p>
-          <Link
-            to="/projects"
-          >
-            Projects
-          </Link>
-        </p>
-      </li>
-      <li>
-        <p>
-          <Link
-            to="/contact"
-          >
-            Contact
-          </Link>
-        </p>
-      </li>
+      <ListLink to='/about' text='About'/>
+      <ListLink to='/blog' text='Blog'/>
+      <ListLink to='/projects' text='Projects'/>
+      <ListLink to='/about' text='About'/>
     </ul>
   </NavWrapper>
 )
