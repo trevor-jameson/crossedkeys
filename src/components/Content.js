@@ -84,11 +84,11 @@ const ContentBody = styled.div`
 
 class Content extends React.Component {
   render() {
-    const { content, date, tags } = this.props
+    const { content, date } = this.props
 
     return (
       <section>
-        {(tags || date) && <ContentHeader date={date} tags={tags} />}
+        {(date) && <ContentHeader date={date} tags={tags} />}
         <ContentBody dangerouslySetInnerHTML={{ __html: content }} />
       </section>
     )

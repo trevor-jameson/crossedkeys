@@ -29,7 +29,7 @@ const NavWrapper = styled.div`
 
   li {
     float: left;
-    margin-left: 7vw;
+    margin-left: 5vw;
   }
 
   ul {
