@@ -1,4 +1,3 @@
-import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import React from 'react'
 import styled from 'styled-components'
@@ -13,9 +12,8 @@ const NavWrapper = styled.div`
 
   position: fixed;
   z-index: 1000;
-  left: 0;
   top: 0;
-  background-color: #06081E;
+  background-color: #000729;
   width: 100vw;
 
 
@@ -61,17 +59,9 @@ const Navbar = () => (
       <ListLink to='/about' text='About'/>
       <ListLink to='/blog' text='Blog'/>
       <ListLink to='/projects' text='Projects'/>
-      <ListLink to='/about' text='About'/>
+      <ListLink to='/resume' text='Resume'/>
     </ul>
   </NavWrapper>
 )
-
-Navbar.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Navbar.defaultProps = {
-  siteTitle: '',
-}
 
 export default Navbar

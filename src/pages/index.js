@@ -6,6 +6,7 @@ import { Link } from 'gatsby'
 import Navbar from '../Components/Navbar'
 import styled from 'styled-components'
 import RecentArticlesList from '../Components/RecentArticlesList'
+import Layout from '../components/Layout'
 
 // Images and styling
 import splashBackgroundImg from '../images/billy-huynh-278252-unsplash.jpg'
@@ -58,23 +59,24 @@ const RecentArticles = styled.div`
 const IndexPage = () => (
     <>
         <SEO title="Home" keywords={['blog', 'software', 'creative', 'writing', 'engineer', 'developer', 'programming']} />
-        <Navbar />
-        <SplashHeader>
-            <h1>Trevor Jameson</h1>
-            <h1>Coder. Writer. Collaborator.</h1>
-        </SplashHeader>
-        <SplashBackground>
-            <img src={splashBackgroundImg} alt='A shimmering cloud of red and blue glitter'/>
-        </SplashBackground>
-        <AboutMe>
-            <img className='aboutMeFront'src={aboutMeFront} alt='Some dizzy dolt (the author) with eyes whipped sideways' />
-            <img  className='aboutMeBack' src={aboutMeBack} alt='Ah! Who said you could hover on me'/>
-            <Link to='/about'>About</Link>
-        </AboutMe>
-        <RecentArticles>
-            {/* Two recent Articles components go here, side by side,
-            one for technical Articles and one for creative Articles */}
-        </RecentArticles>
+        <Layout>
+            <SplashHeader>
+                <h1>Trevor Jameson</h1>
+                <h1>Coder. Writer. Collaborator.</h1>
+            </SplashHeader>
+            <SplashBackground>
+                <img src={splashBackgroundImg} alt='A shimmering cloud of red and blue glitter'/>
+            </SplashBackground>
+            <AboutMe>
+                <img className='aboutMeFront'src={aboutMeFront} alt='Some dizzy dolt (the author) with eyes whipped sideways' />
+                <img  className='aboutMeBack' src={aboutMeBack} alt='Ah! Who said you could hover on me'/>
+                <Link to='/about'>About</Link>
+            </AboutMe>
+            <RecentArticles>
+                {/* Two recent Articles components go here, side by side,
+                one for technical Articles and one for creative Articles */}
+            </RecentArticles>
+        </Layout>
     </>
 )
 
